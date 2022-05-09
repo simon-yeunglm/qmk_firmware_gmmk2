@@ -22,6 +22,7 @@ BLUETOOTH_ENABLE = no        # Enable Bluetooth.
 AUDIO_ENABLE = no            # Audio output.
 RGB_MATRIX_ENABLE = yes      # Enable RGB matrix effects.
 RGB_MATRIX_DRIVER = AW20216  # Enable RGB matrix effects.
+RGB_MATRIX_CUSTOM_USER = yes # Add custom RGB animation
 FLASH_DRIVER = spi           # Enable SPI flash
 EEPROM_DRIVER = custom       # Enable SPI flash memory
 SRC +=  src/eeprom_flash.c \
