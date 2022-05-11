@@ -26,4 +26,5 @@ RGB_MATRIX_CUSTOM_USER = yes # Add custom RGB animation
 FLASH_DRIVER = spi           # Enable SPI flash
 EEPROM_DRIVER = custom       # Enable SPI flash memory
 SRC +=  src/eeprom_flash.c \
-        wb32_spi_master.c
+        wb32_spi_master.c \
+        rgb_matrix_user.c \

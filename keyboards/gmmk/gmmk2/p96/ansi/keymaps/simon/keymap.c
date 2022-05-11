@@ -16,6 +16,8 @@
 
 #include QMK_KEYBOARD_H
 
+#include "rgb_matrix_user.h"
+
 // Each layer gets a name for readability, which is then used in the keymap matrix below.
 // The underscores don't mean anything - you can have a layer called STUFF or any other name.
 #define _BL 0
@@ -62,7 +64,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     uint8_t row     = record->event.key.row;
     uint8_t col     = record->event.key.col;
     bool    pressed = record->event.pressed;
-    rgb_matrix_process_user(row, col, pressed);
+    rgb_matrix_user_process(row, col, pressed);
 
     switch (keycode) {
         case CTL_N:
@@ -126,7 +128,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return false;
         case LED_OFF:
             if (!record->event.pressed) 
-                rgb_matrix_sleep_user();
+                rgb_matrix_user_sleep();
             return false;
         case DBG_LED:
             if (record->event.pressed) {
