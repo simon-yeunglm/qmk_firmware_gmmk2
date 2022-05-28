@@ -571,17 +571,17 @@ static void render_led(int i)
     if (isContinueRenderPass)
     {
 		const float3    scrollColor[]= { 
-			{1.0f , 0.0f , 0.0f }, // red
-			{1.0f , 0.5f , 0.0f }, // orange
-			{1.0f , 1.0f , 0.0f }, // yellow
-			{0.5f , 0.75f, 1.0f }, // cyan 1
-			{0.25f, 0.5f , 1.0f }, // cyan 2
-			{0.0f , 0.0f , 1.0f }, // blue
-			{0.5f , 0.0f , 0.75f}, // purple
-			{1.0f , 0.0f , 0.75f}, // pink
+			{0.75f , 0.0f  , 0.0f },//{1.0f , 0.0f , 0.0f }, // red
+			{0.75f , 0.5f  , 0.0f },//{1.0f , 0.5f , 0.0f }, // orange
+			{0.5f  , 0.5f  , 0.0f },//{1.0f , 1.0f , 0.0f }, // yellow
+			{0.375f, 0.56f , 0.75f },//{0.5f , 0.75f, 1.0f }, // cyan 1
+			{0.187f, 0.375f, 0.75f },//{0.25f, 0.5f , 1.0f }, // cyan 2
+			{0.0f  , 0.0f  , 0.75f },//{0.0f , 0.0f , 1.0f }, // blue
+			{0.368f, 0.0f  , 0.54f},//{0.5f , 0.0f , 0.75f}, // purple
+			{0.69f , 0.0f  , 0.52f},//{1.0f , 0.0f , 0.75f}, // pink
 		};
         const int       numColor    	    = sizeof(scrollColor)/sizeof(float3);
-        const float     distanceBetweenColor= 10.0f;
+        const float     distanceBetweenColor= 11.0f;
         const float     changeColorTime     = 1.5f;
         float	idxOffset	= 1.0f/(distanceBetweenColor * NUM_PIXEL_PER_KEY);
         float   speed       = 1.0f/changeColorTime;
